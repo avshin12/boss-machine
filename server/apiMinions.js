@@ -3,13 +3,13 @@ const { ModuleFilenameHelpers } = require('webpack');
 
 const minionsRouter = express.Router;
 //require any relevate ____ from database 
-const 
+
 
 const {getAllFromDatabase, getFromDatabaseById, 
     addToDatabase, updateInstanceInDatabase, 
     deleteFromDatabasebyId, deleteAllFromDatabase} = require('./db');
 
-    const app = require('./server');
+// const app = require('../server');
 
 
 
