@@ -1,5 +1,7 @@
 const express = require('express');
-const minionsRouter = express.Router();
+//const { ModuleFilenameHelpers } = require('webpack');
+
+const minionsRouter = express.Router;
 //require any relevate ____ from database  
 
 const {getAllFromDatabase, getFromDatabaseById, 
@@ -7,8 +9,7 @@ const {getAllFromDatabase, getFromDatabaseById,
     deleteFromDatabasebyId, deleteAllFromDatabase} = require('./db');
 
 
-minionsRouter.get('/', (req, res, next) => {
-    console.log('ping')
+minionsRouter.get('./minions', (req, res, next) => {
     const allMinions = getAllFromDatabase('minions');
     //async check
     if (allMinions) {
@@ -32,7 +33,7 @@ const addToDatabase = (modelType, instance) => {
 */
 
 // addToDatabase takes a model type ('minion') and an instace (object)
-minionsRouter.post('/', (req, res, next) => {
+minionsRouter.post('./minions', (req, res, next) => {
     newMinion = {};
     newMinion.name = req.body.name;
     newMinion.title = req.body.title;
