@@ -1,14 +1,37 @@
 const express = require('express');
+<<<<<<< HEAD
 const minionsRouter = express.Router();
 //require any relevate ____ from database  
+=======
+//const { ModuleFilenameHelpers } = require('webpack');
+
+const minionsRouter = express.Router;
+<<<<<<<< HEAD:server/apiMinions.js
+//require any relevate ____ from database 
+
+========
+//require any relevate ____ from database  
+>>>>>>>> main:apiMinions.js
+>>>>>>> main
 
 const {getAllFromDatabase, getFromDatabaseById, 
     addToDatabase, updateInstanceInDatabase, 
     deleteFromDatabasebyId, deleteAllFromDatabase} = require('./db');
 
+<<<<<<< HEAD
 
 minionsRouter.get('/', (req, res, next) => {
     console.log('ping')
+=======
+<<<<<<<< HEAD:server/apiMinions.js
+// const app = require('../server');
+
+
+========
+>>>>>>>> main:apiMinions.js
+
+minionsRouter.get('./minions', (req, res, next) => {
+>>>>>>> main
     const allMinions = getAllFromDatabase('minions');
     //async check
     if (allMinions) {
@@ -32,7 +55,11 @@ const addToDatabase = (modelType, instance) => {
 */
 
 // addToDatabase takes a model type ('minion') and an instace (object)
+<<<<<<< HEAD
 minionsRouter.post('/', (req, res, next) => {
+=======
+minionsRouter.post('./minions', (req, res, next) => {
+>>>>>>> main
     newMinion = {};
     newMinion.name = req.body.name;
     newMinion.title = req.body.title;
