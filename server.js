@@ -16,7 +16,7 @@ app.use(cors()); //enable cors for ALL requests
 
 // Add middware for parsing request bodies here:
 
-app.use(bodyParser.json);  //basically tells the system that you want json to be used
+app.use(bodyParser.json());  // <--- Make sure you put () at the end of bodyParser.json() ... basically tells the system that you want json to be used
 
 
 // Mount your existing apiRouter below at the '/api' path.
